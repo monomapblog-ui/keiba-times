@@ -17,6 +17,9 @@ export default function Footer() {
           <Link href="/articles" className="text-sm text-neutral-600 hover:text-neutral-900">
             予想コラム
           </Link>
+          <Link href="/schedule" className="text-sm text-neutral-600 hover:text-neutral-900">
+            重賞日程
+          </Link>
           <Link href="/predictors" className="text-sm text-neutral-600 hover:text-neutral-900">
             予想家一覧
           </Link>

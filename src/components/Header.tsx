@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { href: "/articles", label: "予想コラム" },
+  { href: "/schedule", label: "重賞日程" },
   { href: "/predictors", label: "予想家一覧" },
   { href: "/category/ニュース", label: "ニュース" },
 ];

@@ -19,6 +19,18 @@ export type Article = {
   content: string;
 };
 
+export type GradedRace = {
+  date: string;
+  dow: string;
+  grade: string;
+  name: string;
+  venue: string;
+  ageSex: string;
+  course: string;
+  winner: string | null;
+  jockey: string | null;
+};
+
 export type Predictor = {
   slug: string;
   name: string;
@@ -69,4 +81,18 @@ export function getAllPredictors(): Predictor[] {
 
 export function getPredictorBySlug(slug: string): Predictor | undefined {
   return getAllPredictors().find((p) => p.slug === slug);
+}
+
+export function getGradedRaces(): GradedRace[] {
+  const filePath = path.join(process.cwd(), "content", "graded-races.json");
+  const raw = fs.readFileSync(filePath, "utf8");
+  return JSON.parse(raw) as GradedRace[];
+}
+
+export function getNextGradedRace(today: string): GradedRace | undefined {
+  return getGradedRaces().find((race) => race.date >= today && !race.winner);
+}
+
+export function getArticlesByRace(raceName: string): Article[] {
+  return getAllArticles().filter((a) => a.race === raceName);
 }
