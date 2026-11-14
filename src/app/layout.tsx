@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "競馬予想メディア",
-  description: "競馬の予想コラムを集約するメディアサイト",
+  title: "競馬タイムズ",
+  description: "競馬の予想コラムを集約するメディアサイト「競馬タイムズ」",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,7 +1,7 @@
 import PredictorCard from "@/components/PredictorCard";
 import { getAllPredictors } from "@/lib/content";
 
-export const metadata = { title: "予想家一覧 | 競馬予想メディア" };
+export const metadata = { title: "予想家一覧 | 競馬タイムズ" };
 
 export default function PredictorsPage() {
   const predictors = getAllPredictors();

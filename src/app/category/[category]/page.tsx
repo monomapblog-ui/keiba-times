@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
-  return { title: `${decodeURIComponent(category)} | 競馬予想メディア` };
+  return { title: `${decodeURIComponent(category)} | 競馬タイムズ` };
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {

@@ -11,7 +11,7 @@ export default function Header() {
     <header className="border-b border-neutral-200 bg-white">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-3 px-6 py-4">
         <Link href="/" className="shrink-0 font-serif text-lg font-bold text-neutral-900">
-          競馬予想メディア
+          競馬タイムズ
         </Link>
 
         <nav className="order-3 flex flex-wrap gap-x-5 gap-y-1 sm:order-none sm:ml-auto">

@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="mt-auto border-t border-neutral-200 bg-neutral-50">
       <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-8 px-6 py-10">
         <div className="max-w-xs">
-          <div className="mb-2 font-serif text-base font-bold text-neutral-900">競馬予想メディア</div>
+          <div className="mb-2 font-serif text-base font-bold text-neutral-900">競馬タイムズ</div>
           <p className="text-sm leading-relaxed text-neutral-600">
             競馬の予想コラムを集約し、予想家ごとの視点で楽しめるメディアです。
           </p>
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-neutral-200 px-6 py-4 text-center text-xs text-neutral-600">
-        &copy; {year} 競馬予想メディア
+        &copy; {year} 競馬タイムズ
       </div>
     </footer>
   );

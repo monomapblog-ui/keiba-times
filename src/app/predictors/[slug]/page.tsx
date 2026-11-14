@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const predictor = getPredictorBySlug(slug);
   if (!predictor) return {};
-  return { title: `${predictor.name} | 予想家一覧 | 競馬予想メディア`, description: predictor.bio };
+  return { title: `${predictor.name} | 予想家一覧 | 競馬タイムズ`, description: predictor.bio };
 }
 
 export default async function PredictorPage({ params }: { params: Promise<{ slug: string }> }) {

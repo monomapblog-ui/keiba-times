@@ -2,7 +2,7 @@ import ArticleCard from "@/components/ArticleCard";
 import Sidebar from "@/components/Sidebar";
 import { getAllArticles } from "@/lib/content";
 
-export const metadata = { title: "予想コラム一覧 | 競馬予想メディア" };
+export const metadata = { title: "予想コラム一覧 | 競馬タイムズ" };
 export const instant = false;
 
 export default async function ArticlesPage({

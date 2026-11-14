@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) return {};
-  return { title: `${article.title} | 競馬予想メディア`, description: article.excerpt };
+  return { title: `${article.title} | 競馬タイムズ`, description: article.excerpt };
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
