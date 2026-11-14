@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Article } from "@/lib/content";
 import { getPredictorBySlug } from "@/lib/content";
+import ArticleThumbnail from "@/components/ArticleThumbnail";
 
 const CATEGORY_STYLE: Record<string, string> = {
   予想コラム: "bg-emerald-50 text-emerald-900",
@@ -14,11 +15,13 @@ export default function ArticleCard({ article }: { article: Article }) {
     <article className="flex flex-col gap-3">
       <Link
         href={`/articles/${article.slug}`}
-        className="flex aspect-[4/3] items-center justify-center rounded-lg bg-neutral-100"
+        className="block aspect-[4/3] overflow-hidden rounded-lg"
       >
-        <span className="text-[11px] font-bold tracking-widest text-neutral-500">
-          {article.track ?? article.category}
-        </span>
+        <ArticleThumbnail
+          lines={article.thumbnailLines ?? [article.track ?? article.category]}
+          tag={article.category}
+          theme={article.thumbnailTheme ?? "gold"}
+        />
       </Link>
 
       <span className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-bold ${tagClass}`}>

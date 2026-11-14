@@ -14,6 +14,8 @@ export type Article = {
   predictorSlug?: string;
   track?: string;
   race?: string;
+  thumbnailLines?: string[];
+  thumbnailTheme?: "gold" | "crimson" | "teal" | "blue";
   content: string;
 };
 
