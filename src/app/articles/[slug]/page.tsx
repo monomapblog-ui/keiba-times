@@ -22,24 +22,38 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const predictor = article.predictorSlug ? getPredictorBySlug(article.predictorSlug) : undefined;
 
   return (
-    <article>
-      <div className="mb-4 flex items-center gap-2 text-xs text-neutral-500">
-        <span className="rounded bg-neutral-100 px-2 py-0.5 dark:bg-neutral-800">
+    <article className="mx-auto max-w-2xl px-6 py-12">
+      <div className="mb-4 flex items-center gap-2 text-sm">
+        <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-900">
           {article.category}
         </span>
-        <time dateTime={article.date}>{article.date}</time>
-        {article.track && <span>{article.track}</span>}
+        <time dateTime={article.date} className="text-neutral-600">
+          {article.date}
+        </time>
+        {article.track && <span className="text-neutral-600">{article.track}</span>}
       </div>
-      <h1 className="mb-4 text-3xl font-bold">{article.title}</h1>
+
+      <h1 className="mb-6 font-serif text-3xl font-bold leading-snug text-neutral-900">
+        {article.title}
+      </h1>
+
       {predictor && (
         <Link
           href={`/predictors/${article.predictorSlug}`}
-          className="mb-8 inline-block text-sm font-medium hover:underline"
+          className="mb-9 flex items-center gap-3 rounded-xl border border-neutral-200 p-4"
         >
-          予想家: {predictor.name}
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-neutral-900 text-base font-bold text-white">
+            {predictor.name.slice(0, 1)}
+          </div>
+          <div className="flex flex-col gap-0.5">
+            <span className="text-sm font-bold text-neutral-900">{predictor.name}</span>
+            <span className="text-xs font-bold text-emerald-800">{predictor.specialty}</span>
+          </div>
+          <span className="ml-auto text-sm font-bold text-emerald-800">プロフィールを見る →</span>
         </Link>
       )}
-      <div className="prose prose-neutral dark:prose-invert max-w-none">
+
+      <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-emerald-800">
         <MDXRemote source={article.content} />
       </div>
     </article>

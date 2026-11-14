@@ -5,11 +5,16 @@ export default function PredictorCard({ predictor }: { predictor: Predictor }) {
   return (
     <Link
       href={`/predictors/${predictor.slug}`}
-      className="block rounded-lg border border-black/10 p-5 transition hover:border-black/30 dark:border-white/15 dark:hover:border-white/40"
+      className="flex gap-4 rounded-lg border border-neutral-200 p-5 transition hover:border-neutral-400"
     >
-      <h2 className="mb-1 text-lg font-semibold">{predictor.name}</h2>
-      <p className="mb-2 text-xs text-neutral-500">{predictor.specialty}</p>
-      <p className="text-sm text-neutral-600 dark:text-neutral-400">{predictor.bio}</p>
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-neutral-900 text-lg font-bold text-white">
+        {predictor.name.slice(0, 1)}
+      </div>
+      <div className="flex min-w-0 flex-1 flex-col gap-1">
+        <h2 className="font-serif text-base font-bold text-neutral-900">{predictor.name}</h2>
+        <p className="text-xs font-bold text-emerald-800">{predictor.specialty}</p>
+        <p className="text-sm text-neutral-600">{predictor.bio}</p>
+      </div>
     </Link>
   );
 }

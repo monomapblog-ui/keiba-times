@@ -2,31 +2,45 @@ import Link from "next/link";
 import type { Article } from "@/lib/content";
 import { getPredictorBySlug } from "@/lib/content";
 
+const CATEGORY_STYLE: Record<string, string> = {
+  予想コラム: "bg-emerald-50 text-emerald-900",
+};
+
 export default function ArticleCard({ article }: { article: Article }) {
   const predictor = article.predictorSlug ? getPredictorBySlug(article.predictorSlug) : undefined;
+  const tagClass = CATEGORY_STYLE[article.category] ?? "bg-neutral-100 text-neutral-600";
 
   return (
-    <article className="rounded-lg border border-black/10 p-5 transition hover:border-black/30 dark:border-white/15 dark:hover:border-white/40">
-      <div className="mb-2 flex items-center gap-2 text-xs text-neutral-500">
-        <span className="rounded bg-neutral-100 px-2 py-0.5 dark:bg-neutral-800">
-          {article.category}
+    <article className="flex flex-col gap-3">
+      <Link
+        href={`/articles/${article.slug}`}
+        className="flex aspect-[4/3] items-center justify-center rounded-lg bg-neutral-100"
+      >
+        <span className="text-[11px] font-bold tracking-widest text-neutral-500">
+          {article.track ?? article.category}
         </span>
-        <time dateTime={article.date}>{article.date}</time>
-      </div>
-      <h2 className="mb-2 text-lg font-semibold">
-        <Link href={`/articles/${article.slug}`} className="hover:underline">
+      </Link>
+
+      <span className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-bold ${tagClass}`}>
+        {article.category}
+      </span>
+
+      <h3 className="font-serif text-base font-bold leading-snug">
+        <Link href={`/articles/${article.slug}`} className="text-neutral-900">
           {article.title}
         </Link>
-      </h2>
-      <p className="mb-3 text-sm text-neutral-600 dark:text-neutral-400">{article.excerpt}</p>
-      {predictor && (
-        <Link
-          href={`/predictors/${article.predictorSlug}`}
-          className="text-sm font-medium hover:underline"
-        >
-          予想家: {predictor.name}
-        </Link>
-      )}
+      </h3>
+
+      <p className="truncate text-sm text-neutral-600">{article.excerpt}</p>
+
+      <div className="flex items-center gap-2">
+        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-900 text-[11px] font-bold text-white">
+          {predictor ? predictor.name.slice(0, 1) : "編"}
+        </div>
+        <span className="text-xs text-neutral-600">
+          {predictor ? predictor.name : "編集部"}・{article.date}
+        </span>
+      </div>
     </article>
   );
 }
