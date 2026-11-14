@@ -96,3 +96,28 @@ export function getNextGradedRace(today: string): GradedRace | undefined {
 export function getArticlesByRace(raceName: string): Article[] {
   return getAllArticles().filter((a) => a.race === raceName);
 }
+
+export function searchArticles(query: string): Article[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return getAllArticles();
+
+  const matchingPredictorSlugs = new Set(
+    getAllPredictors()
+      .filter((p) => p.name.toLowerCase().includes(q))
+      .map((p) => p.slug),
+  );
+
+  return getAllArticles().filter((article) => {
+    if (article.predictorSlug && matchingPredictorSlugs.has(article.predictorSlug)) return true;
+    return [
+      article.title,
+      article.excerpt,
+      article.category,
+      article.track,
+      article.race,
+      article.content,
+    ]
+      .filter((field): field is string => Boolean(field))
+      .some((field) => field.toLowerCase().includes(q));
+  });
+}
