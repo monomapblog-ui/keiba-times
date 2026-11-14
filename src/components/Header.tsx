@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import AuthNavLink from "@/components/AuthNavLink";
 
 const NAV_LINKS = [
   { href: "/articles", label: "予想コラム" },
@@ -15,7 +17,7 @@ export default function Header() {
           競馬タイムズ
         </Link>
 
-        <nav className="order-3 flex flex-wrap gap-x-5 gap-y-1 sm:order-none sm:ml-auto">
+        <nav className="order-3 flex flex-wrap items-center gap-x-5 gap-y-1 sm:order-none sm:ml-auto">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -25,6 +27,9 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Suspense fallback={<span className="text-sm font-bold text-neutral-300">ログイン</span>}>
+            <AuthNavLink />
+          </Suspense>
         </nav>
 
         <form

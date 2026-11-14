@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ArticleCard from "@/components/ArticleCard";
+import FavoriteButton from "@/components/FavoriteButton";
 import { getAllPredictors, getArticlesByPredictor, getPredictorBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -33,6 +34,9 @@ export default async function PredictorPage({ params }: { params: Promise<{ slug
             <span className="text-xs font-bold text-emerald-800">{predictor.specialty}</span>
             <p className="text-[15px] leading-relaxed text-neutral-700">{predictor.bio}</p>
             {predictor.twitter && <span className="text-sm text-neutral-600">{predictor.twitter}</span>}
+            <div className="mt-1">
+              <FavoriteButton predictorSlug={predictor.slug} />
+            </div>
             {predictor.content && (
               <div className="prose prose-neutral prose-sm mt-2 max-w-none">
                 <MDXRemote source={predictor.content} />
