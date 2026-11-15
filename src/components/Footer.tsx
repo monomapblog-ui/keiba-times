@@ -23,6 +23,9 @@ export default function Footer() {
           <Link href="/predictors" className="text-sm text-neutral-600 hover:text-neutral-900">
             予想家一覧
           </Link>
+          <Link href="/category/データ分析" className="text-sm text-neutral-600 hover:text-neutral-900">
+            データ分析
+          </Link>
           <Link href="/category/ニュース" className="text-sm text-neutral-600 hover:text-neutral-900">
             ニュース
           </Link>
