@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import ShareButtons from "@/components/ShareButtons";
 import { getAllArticles, getArticleBySlug, getPredictorBySlug } from "@/lib/content";
 
@@ -59,7 +60,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       </div>
 
       <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-emerald-800">
-        <MDXRemote source={article.content} />
+        <MDXRemote
+          source={article.content}
+          options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+        />
       </div>
 
       <div className="mt-10 border-t border-neutral-200 pt-6">

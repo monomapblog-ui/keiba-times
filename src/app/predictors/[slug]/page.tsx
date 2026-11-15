@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import ArticleCard from "@/components/ArticleCard";
 import FavoriteButton from "@/components/FavoriteButton";
 import { getAllPredictors, getArticlesByPredictor, getPredictorBySlug } from "@/lib/content";
@@ -39,7 +40,10 @@ export default async function PredictorPage({ params }: { params: Promise<{ slug
             </div>
             {predictor.content && (
               <div className="prose prose-neutral prose-sm mt-2 max-w-none">
-                <MDXRemote source={predictor.content} />
+                <MDXRemote
+                  source={predictor.content}
+                  options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+                />
               </div>
             )}
           </div>
