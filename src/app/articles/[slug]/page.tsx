@@ -2,12 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import ArticleCard from "@/components/ArticleCard";
 import ShareButtons from "@/components/ShareButtons";
 import ReturnRateLineChart from "@/components/charts/ReturnRateLineChart";
 import StatCompare from "@/components/charts/StatCompare";
+import { getAllArticles, getArticleBySlug, getArticlesByRace, getPredictorBySlug } from "@/lib/content";
 
 const mdxComponents = { ReturnRateLineChart, StatCompare };
-import { getAllArticles, getArticleBySlug, getPredictorBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
   return getAllArticles().map((article) => ({ slug: article.slug }));
@@ -26,6 +27,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) notFound();
 
   const predictor = article.predictorSlug ? getPredictorBySlug(article.predictorSlug) : undefined;
+  const relatedArticles = article.race
+    ? getArticlesByRace(article.race).filter((a) => a.slug !== article.slug)
+    : [];
 
   return (
     <article className="mx-auto max-w-2xl px-6 py-12">
@@ -74,6 +78,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <div className="mt-10 border-t border-neutral-200 pt-6">
         <ShareButtons title={article.title} />
       </div>
+
+      {relatedArticles.length > 0 && (
+        <div className="mt-12 border-t border-neutral-200 pt-8">
+          <h2 className="mb-5 font-serif text-lg font-bold text-neutral-900">
+            同じレースの関連記事
+          </h2>
+          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
+            {relatedArticles.map((related) => (
+              <ArticleCard key={related.slug} article={related} />
+            ))}
+          </div>
+        </div>
+      )}
     </article>
   );
 }
