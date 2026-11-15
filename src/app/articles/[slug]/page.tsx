@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import ShareButtons from "@/components/ShareButtons";
 import { getAllArticles, getArticleBySlug, getPredictorBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -53,8 +54,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </Link>
       )}
 
+      <div className="mb-9">
+        <ShareButtons title={article.title} />
+      </div>
+
       <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-emerald-800">
         <MDXRemote source={article.content} />
+      </div>
+
+      <div className="mt-10 border-t border-neutral-200 pt-6">
+        <ShareButtons title={article.title} />
       </div>
     </article>
   );
