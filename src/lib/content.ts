@@ -14,6 +14,7 @@ export type Article = {
   predictorSlug?: string;
   track?: string;
   race?: string;
+  pick?: string;
   thumbnailLines?: string[];
   thumbnailTheme?: "gold" | "crimson" | "teal" | "blue";
   content: string;
@@ -95,6 +96,35 @@ export function getNextGradedRace(today: string): GradedRace | undefined {
 
 export function getArticlesByRace(raceName: string): Article[] {
   return getAllArticles().filter((a) => a.race === raceName);
+}
+
+export type PredictionResult = {
+  article: Article;
+  race: GradedRace;
+  result: "hit" | "miss" | "pending";
+};
+
+export function getPredictionsByPredictor(predictorSlug: string): PredictionResult[] {
+  const races = getGradedRaces();
+  const results: PredictionResult[] = [];
+
+  for (const article of getArticlesByPredictor(predictorSlug)) {
+    if (!article.pick || !article.race) continue;
+    const race = races.find((r) => r.name === article.race && r.date === article.date);
+    if (!race) continue;
+    const result: PredictionResult["result"] = !race.winner
+      ? "pending"
+      : race.winner === article.pick
+        ? "hit"
+        : "miss";
+    results.push({ article, race, result });
+  }
+
+  return results;
+}
+
+export function getAllPredictions(): PredictionResult[] {
+  return getAllPredictors().flatMap((p) => getPredictionsByPredictor(p.slug));
 }
 
 export function searchArticles(query: string): Article[] {
