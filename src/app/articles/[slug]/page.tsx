@@ -8,9 +8,10 @@ import ShareButtons from "@/components/ShareButtons";
 import ViewTracker from "@/components/ViewTracker";
 import ReturnRateLineChart from "@/components/charts/ReturnRateLineChart";
 import StatCompare from "@/components/charts/StatCompare";
+import StrategyBarChart from "@/components/charts/StrategyBarChart";
 import { getAllArticles, getArticleBySlug, getArticlesByRace, getPredictorBySlug } from "@/lib/content";
 
-const mdxComponents = { ReturnRateLineChart, StatCompare };
+const mdxComponents = { ReturnRateLineChart, StatCompare, StrategyBarChart };
 
 export function generateStaticParams() {
   return getAllArticles().map((article) => ({ slug: article.slug }));
