@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import ShareButtons from "@/components/ShareButtons";
+import ReturnRateLineChart from "@/components/charts/ReturnRateLineChart";
+import StatCompare from "@/components/charts/StatCompare";
+
+const mdxComponents = { ReturnRateLineChart, StatCompare };
 import { getAllArticles, getArticleBySlug, getPredictorBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -62,6 +66,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-emerald-800">
         <MDXRemote
           source={article.content}
+          components={mdxComponents}
           options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
         />
       </div>
