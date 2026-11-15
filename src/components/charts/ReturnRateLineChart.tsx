@@ -18,7 +18,21 @@ const PAD_BOTTOM = 32;
 const COLOR_FAVORITE = "#2a78d6";
 const COLOR_LONGSHOT = "#eb6834";
 
-export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; cap?: number }) {
+export default function ReturnRateLineChart({
+  data,
+  cap,
+  seriesALabel = "1番人気",
+  seriesBLabel = "最低人気",
+  hideSeriesB = false,
+  footnote = "年別の単勝回収率(その年のGI対象レースをまとめて100円ずつ購入したと仮定)。JRA公式サイトのレース結果データより作成。",
+}: {
+  data: YearPoint[];
+  cap?: number;
+  seriesALabel?: string;
+  seriesBLabel?: string;
+  hideSeriesB?: boolean;
+  footnote?: string;
+}) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const plotWidth = WIDTH - PAD_LEFT - PAD_RIGHT;
@@ -26,9 +40,12 @@ export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; 
 
   const maxValue = useMemo(() => {
     const capped = cap ?? Infinity;
-    const max = Math.max(...data.map((d) => Math.max(Math.min(d.favorite, capped), Math.min(d.longshot, capped))), 100);
+    const values = data.map((d) =>
+      hideSeriesB ? Math.min(d.favorite, capped) : Math.max(Math.min(d.favorite, capped), Math.min(d.longshot, capped)),
+    );
+    const max = Math.max(...values, 100);
     return Math.ceil((max + 20) / 20) * 20;
-  }, [data, cap]);
+  }, [data, cap, hideSeriesB]);
 
   const xFor = (i: number) => PAD_LEFT + (i / (data.length - 1)) * plotWidth;
   const clampVal = (v: number) => (cap !== undefined ? Math.min(v, cap) : v);
@@ -48,12 +65,14 @@ export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; 
       <div className="mb-3 flex items-center gap-5 text-xs font-bold text-neutral-700">
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-2.5 w-2.5 rounded-full" style={{ background: COLOR_FAVORITE }} />
-          1番人気
+          {seriesALabel}
         </span>
-        <span className="flex items-center gap-1.5">
-          <span className="inline-block h-2.5 w-2.5 rounded-full" style={{ background: COLOR_LONGSHOT }} />
-          最低人気
-        </span>
+        {!hideSeriesB && (
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-2.5 w-2.5 rounded-full" style={{ background: COLOR_LONGSHOT }} />
+            {seriesBLabel}
+          </span>
+        )}
         <span className="flex items-center gap-1.5 text-neutral-400">
           <span className="inline-block h-0 w-3 border-t-2 border-dashed border-neutral-400" />
           損益分岐(回収率100%)
@@ -65,7 +84,7 @@ export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; 
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
           className="w-full"
           role="img"
-          aria-label="1番人気と最低人気の年別回収率の推移"
+          aria-label={hideSeriesB ? `${seriesALabel}の年別回収率の推移` : `${seriesALabel}と${seriesBLabel}の年別回収率の推移`}
           onMouseLeave={() => setHoverIndex(null)}
         >
           {yTicks.map((t) => (
@@ -102,10 +121,12 @@ export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; 
             ) : null,
           )}
 
-          <path d={linePath("longshot")} fill="none" stroke={COLOR_LONGSHOT} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+          {!hideSeriesB && (
+            <path d={linePath("longshot")} fill="none" stroke={COLOR_LONGSHOT} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+          )}
           <path d={linePath("favorite")} fill="none" stroke={COLOR_FAVORITE} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
 
-          {cap !== undefined &&
+          {!hideSeriesB && cap !== undefined &&
             data.map((d) =>
               d.longshot > cap ? (
                 <text
@@ -142,15 +163,16 @@ export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; 
               fill={COLOR_FAVORITE}
             />
           ))}
-          {data.map((d, i) => (
-            <circle
-              key={d.year}
-              cx={xFor(i)}
-              cy={yFor(d.longshot)}
-              r={hoverIndex === i ? 4 : 0}
-              fill={COLOR_LONGSHOT}
-            />
-          ))}
+          {!hideSeriesB &&
+            data.map((d, i) => (
+              <circle
+                key={d.year}
+                cx={xFor(i)}
+                cy={yFor(d.longshot)}
+                r={hoverIndex === i ? 4 : 0}
+                fill={COLOR_LONGSHOT}
+              />
+            ))}
 
           {data.map((d, i) => (
             <rect
@@ -174,14 +196,18 @@ export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; 
             }}
           >
             <div className="mb-1 font-bold text-neutral-900">{hovered.year}年</div>
-            <div style={{ color: COLOR_FAVORITE }}>1番人気: {hovered.favorite}%</div>
-            <div style={{ color: COLOR_LONGSHOT }}>最低人気: {hovered.longshot}%</div>
+            <div style={{ color: COLOR_FAVORITE }}>
+              {seriesALabel}: {hovered.favorite}%
+            </div>
+            {!hideSeriesB && (
+              <div style={{ color: COLOR_LONGSHOT }}>
+                {seriesBLabel}: {hovered.longshot}%
+              </div>
+            )}
           </div>
         )}
       </div>
-      <p className="mt-2 text-[11px] text-neutral-500">
-        年別の単勝回収率(その年のGI対象レースをまとめて100円ずつ購入したと仮定)。JRA公式サイトのレース結果データより作成。
-      </p>
+      <p className="mt-2 text-[11px] text-neutral-500">{footnote}</p>
     </div>
   );
 }
