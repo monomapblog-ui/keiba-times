@@ -207,9 +207,79 @@
         "finalStraightSlope": "none",
         "slopeInfo": "3コーナー手前から上り、高低差4.3m(JRA公式)。坂を上り切って4コーナーで下りに転じ、最後の直線には上り坂がない。",
         "tendency": "最後の直線が下り基調のまま続くため、持続的なスピードを持つ馬が台頭しやすいとされる。",
-        "mainRaces": ["マイルチャンピオンシップ"],
+        "mainRaces": ["マイルチャンピオンシップ", "マイラーズカップ", "シンザン記念", "京都金杯", "デイリー杯2歳ステークス", "洛陽ステークス", "エルフィンステークス", "睦月ステークス", "米子ステークス"],
         "startAngle": 300,
-        "slopeArcs": [{ "from": 215, "to": 260, "type": "up" }, { "from": 260, "to": 304, "type": "down" }]
+        "slopeArcs": [{ "from": 215, "to": 260, "type": "up" }, { "from": 260, "to": 304, "type": "down" }],
+        "stats": {
+          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
+          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-t1600.html",
+          "asOf": "2026-10-27",
+          "caveat": "京都競馬場の芝1600mには内回り・外回りの2パターンがあり、若駒の下級条件では内回り、重賞・OP・古馬戦は外回りが使われる。下記の枠番別・脚質別・人気別・騎手別・血統別の集計は情報源の性質上、内回り・外回りを分けずに芝1600m全体を集計したものである点に注意。出典自身の注記では、外回りの逃げ馬勝率は15%、内回りの逃げ馬勝率は23%と、回り方で傾向が変わるとされている。調教師別・母父別のトップ10データは情報源で確認できず、今回は掲載していない。",
+          "bracketStats": [
+            { "bracket": 1, "record": "22-20-18-214", "winRate": 8, "placeRate": 15, "showRate": 21, "badges": ["好枠", "逃げ警戒", "道悪実績"], "paceBreakdown": [{ "style": "逃げ", "rate": 42 }, { "style": "先行", "rate": 26 }, { "style": "差し", "rate": 19 }, { "style": "追込", "rate": 11 }] },
+            { "bracket": 2, "record": "17-21-18-233", "winRate": 5, "placeRate": 13, "showRate": 19, "paceBreakdown": [{ "style": "逃げ", "rate": 27 }, { "style": "先行", "rate": 37 }, { "style": "差し", "rate": 10 }, { "style": "追込", "rate": 8 }] },
+            { "bracket": 3, "record": "15-26-23-245", "winRate": 4, "placeRate": 13, "showRate": 20, "badges": ["逃げ警戒"], "paceBreakdown": [{ "style": "逃げ", "rate": 44 }, { "style": "先行", "rate": 32 }, { "style": "差し", "rate": 18 }, { "style": "追込", "rate": 6 }] },
+            { "bracket": 4, "record": "30-28-19-249", "winRate": 9, "placeRate": 17, "showRate": 23, "badges": ["好枠", "道悪実績"], "paceBreakdown": [{ "style": "逃げ", "rate": 32 }, { "style": "先行", "rate": 33 }, { "style": "差し", "rate": 25 }, { "style": "追込", "rate": 11 }] },
+            { "bracket": 5, "record": "22-24-25-268", "winRate": 6, "placeRate": 13, "showRate": 20, "paceBreakdown": [{ "style": "逃げ", "rate": 37 }, { "style": "先行", "rate": 27 }, { "style": "差し", "rate": 22 }, { "style": "追込", "rate": 6 }] },
+            { "bracket": 6, "record": "29-25-18-284", "winRate": 8, "placeRate": 15, "showRate": 20, "badges": ["好枠"], "paceBreakdown": [{ "style": "逃げ", "rate": 30 }, { "style": "先行", "rate": 27 }, { "style": "差し", "rate": 20 }, { "style": "追込", "rate": 10 }] },
+            { "bracket": 7, "record": "32-22-33-329", "winRate": 7, "placeRate": 12, "showRate": 20, "badges": ["道悪実績"], "paceBreakdown": [{ "style": "逃げ", "rate": 30 }, { "style": "先行", "rate": 28 }, { "style": "差し", "rate": 17 }, { "style": "追込", "rate": 11 }] },
+            { "bracket": 8, "record": "35-36-48-321", "winRate": 7, "placeRate": 16, "showRate": 27, "badges": ["逃げ警戒"], "paceBreakdown": [{ "style": "逃げ", "rate": 46 }, { "style": "先行", "rate": 41 }, { "style": "差し", "rate": 28 }, { "style": "追込", "rate": 7 }] }
+          ],
+          "paceStats": [
+            { "style": "逃げ", "winRate": 18, "placeRate": 27, "showRate": 37 },
+            { "style": "先行", "winRate": 10, "placeRate": 22, "showRate": 31 },
+            { "style": "差し", "winRate": 5, "placeRate": 10, "showRate": 17 },
+            { "style": "追込", "winRate": 1, "placeRate": 4, "showRate": 8 }
+          ],
+          "favoriteStats": [
+            { "rank": 1, "record": "64-42-20-76", "winRate": 31, "placeRate": 52, "showRate": 62, "estimatedReturnRate": 68 },
+            { "rank": 2, "record": "39-39-29-95", "winRate": 19, "placeRate": 38, "showRate": 52, "estimatedReturnRate": 76 },
+            { "rank": 3, "record": "24-30-26-122", "winRate": 11, "placeRate": 26, "showRate": 39, "estimatedReturnRate": 67 },
+            { "rank": 4, "record": "26-22-20-134", "winRate": 12, "placeRate": 23, "showRate": 33, "estimatedReturnRate": 106 },
+            { "rank": 5, "record": "12-22-21-147", "winRate": 5, "placeRate": 16, "showRate": 27, "estimatedReturnRate": 57 },
+            { "rank": 6, "record": "10-16-24-152", "winRate": 4, "placeRate": 12, "showRate": 24, "estimatedReturnRate": 64 }
+          ],
+          "jockeyTop10": [
+            { "name": "川田将雅", "record": "22-16-6-22", "favoriteRecord": "21-16-6-17", "longshotRecord": "1-0-0-5" },
+            { "name": "松山弘平", "record": "16-6-10-74", "favoriteRecord": "12-5-5-38", "longshotRecord": "4-1-5-36" },
+            { "name": "岩田望来", "record": "13-10-16-69", "favoriteRecord": "10-9-12-24", "longshotRecord": "3-1-4-45" },
+            { "name": "西村淳也", "record": "12-16-16-67", "favoriteRecord": "10-11-10-27", "longshotRecord": "2-5-6-40" },
+            { "name": "浜中俊", "record": "12-3-4-39", "favoriteRecord": "9-2-1-9", "longshotRecord": "3-1-3-30" },
+            { "name": "坂井瑠星", "record": "8-13-10-69", "favoriteRecord": "7-9-8-39", "longshotRecord": "1-4-2-30" },
+            { "name": "団野大成", "record": "8-13-8-76", "favoriteRecord": "5-7-3-17", "longshotRecord": "3-6-5-59" },
+            { "name": "北村友一", "record": "8-4-5-69", "favoriteRecord": "7-3-2-24", "longshotRecord": "1-1-3-45" },
+            { "name": "武豊", "record": "7-12-9-53", "favoriteRecord": "6-9-7-24", "longshotRecord": "1-3-2-29" },
+            { "name": "池添謙一", "record": "7-8-6-46", "favoriteRecord": "6-7-2-12", "longshotRecord": "1-1-4-34" }
+          ],
+          "sireTop10": [
+            { "name": "エピファネイア", "lineage": "ヘイルトゥリーズン系", "placedCount": 47, "favoriteCount": 34, "longshotCount": 13 },
+            { "name": "モーリス", "lineage": "ヘイルトゥリーズン系", "placedCount": 37, "favoriteCount": 30, "longshotCount": 7 },
+            { "name": "キズナ", "lineage": "サンデーサイレンス系", "placedCount": 36, "favoriteCount": 30, "longshotCount": 6 },
+            { "name": "ロードカナロア", "lineage": "ミスプロ系・キングマンボ系", "placedCount": 32, "favoriteCount": 24, "longshotCount": 8 },
+            { "name": "リオンディーズ", "lineage": "ミスプロ系・キングマンボ系", "placedCount": 27, "favoriteCount": 20, "longshotCount": 7 },
+            { "name": "キタサンブラック", "lineage": "サンデーサイレンス系", "placedCount": 23, "favoriteCount": 16, "longshotCount": 7 },
+            { "name": "シルバーステート", "lineage": "サンデーサイレンス系", "placedCount": 19, "favoriteCount": 12, "longshotCount": 7 },
+            { "name": "ルーラーシップ", "lineage": "ミスプロ系・キングマンボ系", "placedCount": 18, "favoriteCount": 11, "longshotCount": 7 },
+            { "name": "イスラボニータ", "lineage": "サンデーサイレンス系", "placedCount": 16, "favoriteCount": 12, "longshotCount": 4 },
+            { "name": "リアルスティール", "lineage": "サンデーサイレンス系", "placedCount": 15, "favoriteCount": 10, "longshotCount": 5 }
+          ],
+          "lineageGroupStats": [
+            { "group": "サンデーサイレンス系", "count": 403, "share": 49.1 },
+            { "group": "ミスプロ系・キングマンボ系", "count": 182, "share": 22.2 },
+            { "group": "ヘイルトゥリーズン系", "count": 179, "share": 21.8 },
+            { "group": "ノーザンダンサー系", "count": 53, "share": 6.5 },
+            { "group": "エーピーインディ系", "count": 4, "share": 0.5 }
+          ],
+          "baseTimes": {
+            "2歳新馬": "1:34.9",
+            "2歳未勝利": "1:34.6",
+            "2歳": "1:34.6",
+            "3歳": "1:34.0",
+            "3歳以上": "1:33.0",
+            "4歳以上": "1:33.2"
+          },
+          "unavailable": ["調教師別成績トップ10", "血統(母父)別成績トップ10"]
+        }
       },
       {
         "slug": "turf-2000-inner",

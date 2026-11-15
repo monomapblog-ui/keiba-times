@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CourseStats from "@/components/CourseStats";
 import CourseTrackDiagram from "@/components/CourseTrackDiagram";
 import { getAllRacecourses, getCourseDistance } from "@/lib/courses";
 
@@ -42,7 +43,7 @@ export default async function CourseDistancePage({
   const { course, distance: d } = found;
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-10">
+    <div className="mx-auto max-w-4xl px-6 py-10">
       <div className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-neutral-600">
         <Link href="/courses" className="hover:opacity-70">
           競馬場一覧
@@ -122,6 +123,8 @@ export default async function CourseDistancePage({
           </div>
         </div>
       )}
+
+      {d.stats && <CourseStats stats={d.stats} />}
 
       <p className="text-xs text-neutral-400">
         ※ コース図は模式図であり、縮尺・形状は正確ではありません。距離や坂の数値はJRA公式情報を基にしていますが、一部確認が取れていない項目は「不明」としています。

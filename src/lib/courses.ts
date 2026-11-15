@@ -7,6 +7,68 @@ export type SlopeArc = {
   type: "up" | "down";
 };
 
+export type BracketStat = {
+  bracket: number;
+  record: string;
+  winRate: number;
+  placeRate: number;
+  showRate: number;
+  badges?: string[];
+  paceBreakdown?: { style: string; rate: number }[];
+};
+
+export type PaceStat = {
+  style: string;
+  winRate: number;
+  placeRate: number;
+  showRate: number;
+};
+
+export type FavoriteStat = {
+  rank: number;
+  record: string;
+  winRate: number;
+  placeRate: number;
+  showRate: number;
+  estimatedReturnRate?: number;
+};
+
+export type JockeyStat = {
+  name: string;
+  record: string;
+  favoriteRecord?: string;
+  longshotRecord?: string;
+};
+
+export type SireStat = {
+  name: string;
+  lineage?: string;
+  placedCount: number;
+  favoriteCount: number;
+  longshotCount: number;
+};
+
+export type LineageGroupStat = {
+  group: string;
+  count: number;
+  share: number;
+};
+
+export type CourseStats = {
+  sourceLabel: string;
+  sourceUrl: string;
+  asOf?: string;
+  caveat?: string;
+  bracketStats?: BracketStat[];
+  paceStats?: PaceStat[];
+  favoriteStats?: FavoriteStat[];
+  jockeyTop10?: JockeyStat[];
+  sireTop10?: SireStat[];
+  lineageGroupStats?: LineageGroupStat[];
+  baseTimes?: Record<string, string>;
+  unavailable?: string[];
+};
+
 export type CourseDistance = {
   slug: string;
   surface: "芝" | "ダート";
@@ -20,6 +82,7 @@ export type CourseDistance = {
   mainRaces?: string[];
   startAngle: number;
   slopeArcs: SlopeArc[];
+  stats?: CourseStats;
 };
 
 export type Racecourse = {
