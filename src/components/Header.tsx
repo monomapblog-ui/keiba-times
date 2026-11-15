@@ -5,6 +5,7 @@ import AuthNavLink from "@/components/AuthNavLink";
 const NAV_LINKS = [
   { href: "/articles", label: "予想コラム" },
   { href: "/schedule", label: "重賞日程" },
+  { href: "/courses", label: "コース特徴" },
   { href: "/predictors", label: "予想家一覧" },
   { href: "/category/データ分析", label: "データ分析" },
   { href: "/category/ニュース", label: "ニュース" },
