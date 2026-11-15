@@ -30,6 +30,12 @@ export default function Footer() {
             ニュース
           </Link>
         </div>
+        <div className="flex flex-col gap-2">
+          <span className="text-xs font-bold text-neutral-600">競馬タイムズについて</span>
+          <Link href="/about" className="text-sm text-neutral-600 hover:text-neutral-900">
+            選ばれる理由
+          </Link>
+        </div>
       </div>
       <div className="border-t border-neutral-200 px-6 py-4 text-center text-xs text-neutral-600">
         &copy; {year} 競馬タイムズ
