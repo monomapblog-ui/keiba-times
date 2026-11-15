@@ -18,19 +18,21 @@ const PAD_BOTTOM = 32;
 const COLOR_FAVORITE = "#2a78d6";
 const COLOR_LONGSHOT = "#eb6834";
 
-export default function ReturnRateLineChart({ data }: { data: YearPoint[] }) {
+export default function ReturnRateLineChart({ data, cap }: { data: YearPoint[]; cap?: number }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const plotWidth = WIDTH - PAD_LEFT - PAD_RIGHT;
   const plotHeight = HEIGHT - PAD_TOP - PAD_BOTTOM;
 
   const maxValue = useMemo(() => {
-    const max = Math.max(...data.map((d) => Math.max(d.favorite, d.longshot)), 100);
+    const capped = cap ?? Infinity;
+    const max = Math.max(...data.map((d) => Math.max(Math.min(d.favorite, capped), Math.min(d.longshot, capped))), 100);
     return Math.ceil((max + 20) / 20) * 20;
-  }, [data]);
+  }, [data, cap]);
 
   const xFor = (i: number) => PAD_LEFT + (i / (data.length - 1)) * plotWidth;
-  const yFor = (v: number) => PAD_TOP + plotHeight - (v / maxValue) * plotHeight;
+  const clampVal = (v: number) => (cap !== undefined ? Math.min(v, cap) : v);
+  const yFor = (v: number) => PAD_TOP + plotHeight - (clampVal(v) / maxValue) * plotHeight;
 
   const linePath = (key: "favorite" | "longshot") =>
     data.map((d, i) => `${i === 0 ? "M" : "L"}${xFor(i)},${yFor(d[key])}`).join(" ");
@@ -102,6 +104,23 @@ export default function ReturnRateLineChart({ data }: { data: YearPoint[] }) {
 
           <path d={linePath("longshot")} fill="none" stroke={COLOR_LONGSHOT} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
           <path d={linePath("favorite")} fill="none" stroke={COLOR_FAVORITE} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+
+          {cap !== undefined &&
+            data.map((d) =>
+              d.longshot > cap ? (
+                <text
+                  key={`callout-${d.year}`}
+                  x={xFor(data.indexOf(d))}
+                  y={yFor(cap) - 8}
+                  textAnchor="middle"
+                  fontSize="10"
+                  fontWeight="bold"
+                  fill={COLOR_LONGSHOT}
+                >
+                  ↑{d.longshot}%
+                </text>
+              ) : null,
+            )}
 
           {hoverIndex !== null && (
             <line
