@@ -16,7 +16,7 @@ export default function CategoryCard({ category, count }: { category: string; co
   return (
     <Link
       href={`/category/${encodeURIComponent(category)}`}
-      className="flex flex-col gap-2.5 rounded-xl border border-neutral-200 p-5"
+      className="flex flex-col gap-2.5 rounded-xl border border-neutral-200 bg-white p-5"
     >
       <div className="flex gap-1.5">
         {swatches.map((swatch, i) => (

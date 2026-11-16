@@ -16,7 +16,7 @@ export default function UpcomingRaceStrip({
   articlesByRace: Record<string, Article[]>;
 }) {
   return (
-    <div className="-mx-6 flex gap-3 overflow-x-auto px-6 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:px-0 lg:grid-cols-5">
+    <div className="-mx-6 flex gap-3 overflow-x-auto px-6 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:px-0">
       {races.map((race) => {
         const badge = courseBadge(race.course);
         const hasArticle = (articlesByRace[race.name] ?? []).length > 0;
@@ -25,7 +25,8 @@ export default function UpcomingRaceStrip({
           <Link
             key={`${race.date}-${race.name}`}
             href={href}
-            className="flex w-44 shrink-0 flex-col gap-2 rounded-xl border border-neutral-200 p-4 hover:border-neutral-400 sm:w-auto"
+            className="flex w-44 shrink-0 flex-col gap-2 rounded-xl border border-neutral-200 bg-white p-4 hover:border-neutral-400 sm:w-auto"
+            style={{ borderTop: "3px solid var(--color-brand)" }}
           >
             <div className="flex items-center gap-1.5">
               <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${gradeClass(race.grade)}`}>

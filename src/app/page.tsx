@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { connection } from "next/server";
-import ArticleCard from "@/components/ArticleCard";
 import CategoryCard from "@/components/CategoryCard";
 import FeaturedRaceHero from "@/components/FeaturedRaceHero";
+import IconLegend from "@/components/IconLegend";
+import LatestArticlesTabs from "@/components/LatestArticlesTabs";
 import PredictorCard from "@/components/PredictorCard";
-import Sidebar from "@/components/Sidebar";
+import PromoBannerRow from "@/components/PromoBannerRow";
+import RaceDayExplorer from "@/components/RaceDayExplorer";
 import UpcomingRaceStrip from "@/components/UpcomingRaceStrip";
 import {
   getAllArticles,
@@ -13,14 +15,21 @@ import {
   getArticlesByCategory,
   getArticlesByRace,
   getGradedRaces,
+  getPredictorBySlug,
 } from "@/lib/content";
 import { getAllRacecourses } from "@/lib/courses";
+import { buildRaceDays } from "@/lib/raceDayMock";
 
 export default async function Home() {
   await connection();
   const today = new Date().toISOString().slice(0, 10);
 
-  const latestArticles = getAllArticles().slice(0, 6);
+  const latestArticles = getAllArticles()
+    .slice(0, 12)
+    .map((article) => ({
+      ...article,
+      predictorName: article.predictorSlug ? getPredictorBySlug(article.predictorSlug)?.name : undefined,
+    }));
   const categories = getAllCategories();
   const predictors = getAllPredictors();
   const racecourses = getAllRacecourses();
@@ -30,18 +39,19 @@ export default async function Home() {
     .sort((a, b) => (a.date < b.date ? -1 : 1));
   const nextGrade1 = upcomingRaces.find((r) => r.grade.replace("J・", "") === "GⅠ");
   const featuredRace = nextGrade1 ?? upcomingRaces[0];
-  const strip = upcomingRaces.filter((r) => r !== featuredRace).slice(0, 5);
+  const strip = upcomingRaces.filter((r) => r !== featuredRace).slice(0, 3);
 
   const raceNames = Array.from(
-    new Set([featuredRace?.name, ...strip.map((r) => r.name)].filter((n): n is string => Boolean(n))),
+    new Set([featuredRace?.name, ...upcomingRaces.slice(0, 12).map((r) => r.name)].filter(
+      (n): n is string => Boolean(n),
+    )),
   );
   const articlesByRace = Object.fromEntries(raceNames.map((name) => [name, getArticlesByRace(name)]));
+  const raceDays = buildRaceDays(upcomingRaces, articlesByRace);
 
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-8 sm:flex-row sm:items-start sm:gap-10">
-      <Sidebar />
-
-      <div className="flex min-w-0 flex-1 flex-col gap-14">
+    <div className="flex flex-col gap-3" style={{ background: "var(--background)" }}>
+      <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         {featuredRace && (
           <section className="flex flex-col gap-5">
             <FeaturedRaceHero
@@ -49,70 +59,72 @@ export default async function Home() {
               today={today}
               articles={articlesByRace[featuredRace.name] ?? []}
             />
-            {strip.length > 0 && (
-              <UpcomingRaceStrip races={strip} articlesByRace={articlesByRace} />
-            )}
+            {strip.length > 0 && <UpcomingRaceStrip races={strip} articlesByRace={articlesByRace} />}
           </section>
         )}
+      </div>
 
-        <section>
-          <div className="mb-6 flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-bold text-neutral-900">最新の記事</h2>
-            <Link href="/articles" className="text-sm font-bold text-emerald-800">
-              すべて見る →
+      <div className="mx-auto w-full max-w-6xl px-6 py-10">
+        {raceDays.length > 0 && <RaceDayExplorer raceDays={raceDays} />}
+      </div>
+
+      <div className="mx-auto w-full max-w-6xl px-6 pb-10">
+        <PromoBannerRow />
+      </div>
+
+      <div className="mx-auto w-full max-w-6xl px-6 pb-14">
+        <div className="mb-6 flex items-baseline justify-between">
+          <h2 className="font-serif text-xl font-bold text-neutral-900">最新記事・予想コラム</h2>
+          <Link href="/articles" className="text-sm font-bold text-emerald-800">
+            すべて見る →
+          </Link>
+        </div>
+        <LatestArticlesTabs articles={latestArticles} categories={categories} />
+      </div>
+
+      <div className="mx-auto w-full max-w-6xl px-6 pb-14">
+        <div className="mb-6 flex items-baseline justify-between">
+          <h2 className="font-serif text-xl font-bold text-neutral-900">競馬場コース特徴</h2>
+          <Link href="/courses" className="text-sm font-bold text-emerald-800">
+            すべて見る →
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-2.5">
+          {racecourses.map((course) => (
+            <Link
+              key={course.slug}
+              href={`/courses/${course.slug}`}
+              className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-bold text-neutral-800 hover:border-neutral-400"
+            >
+              {course.name}
+              <span className="ml-1.5 text-xs font-normal text-neutral-500">
+                {course.turnDirection === "right" ? "右" : "左"}
+              </span>
             </Link>
-          </div>
-          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {latestArticles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
 
-        <section>
-          <div className="mb-6 flex items-baseline justify-between">
-            <h2 className="font-serif text-xl font-bold text-neutral-900">競馬場コース特徴</h2>
-            <Link href="/courses" className="text-sm font-bold text-emerald-800">
-              すべて見る →
-            </Link>
-          </div>
-          <div className="flex flex-wrap gap-2.5">
-            {racecourses.map((course) => (
-              <Link
-                key={course.slug}
-                href={`/courses/${course.slug}`}
-                className="rounded-full border border-neutral-200 px-4 py-2 text-sm font-bold text-neutral-800 hover:border-neutral-400"
-              >
-                {course.name}
-                <span className="ml-1.5 text-xs font-normal text-neutral-500">
-                  {course.turnDirection === "right" ? "右" : "左"}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
+      <div className="mx-auto w-full max-w-6xl px-6 pb-14">
+        <h2 className="mb-6 font-serif text-xl font-bold text-neutral-900">注目カテゴリ</h2>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {categories.map((category) => (
+            <CategoryCard key={category} category={category} count={getArticlesByCategory(category).length} />
+          ))}
+        </div>
+      </div>
 
-        <section>
-          <h2 className="mb-6 font-serif text-xl font-bold text-neutral-900">注目カテゴリ</h2>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {categories.map((category) => (
-              <CategoryCard
-                key={category}
-                category={category}
-                count={getArticlesByCategory(category).length}
-              />
-            ))}
-          </div>
-        </section>
+      <div className="mx-auto w-full max-w-6xl px-6 pb-14">
+        <h2 className="mb-6 font-serif text-xl font-bold text-neutral-900">注目の予想家</h2>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {predictors.map((predictor) => (
+            <PredictorCard key={predictor.slug} predictor={predictor} />
+          ))}
+        </div>
+      </div>
 
-        <section>
-          <h2 className="mb-6 font-serif text-xl font-bold text-neutral-900">注目の予想家</h2>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {predictors.map((predictor) => (
-              <PredictorCard key={predictor.slug} predictor={predictor} />
-            ))}
-          </div>
-        </section>
+      <div className="mx-auto w-full max-w-6xl px-6 pb-14">
+        <IconLegend />
       </div>
     </div>
   );

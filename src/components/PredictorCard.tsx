@@ -5,7 +5,7 @@ export default function PredictorCard({ predictor }: { predictor: Predictor }) {
   return (
     <Link
       href={`/predictors/${predictor.slug}`}
-      className="flex gap-4 rounded-lg border border-neutral-200 p-5 transition hover:border-neutral-400"
+      className="flex gap-4 rounded-lg border border-neutral-200 bg-white p-5 transition hover:border-neutral-400"
     >
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-neutral-900 text-lg font-bold text-white">
         {predictor.name.slice(0, 1)}

@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
+  --background: #f4f5f7;
   --foreground: #171717;
 }
 
@@ -11,6 +11,15 @@
   --color-foreground: var(--foreground);
   --font-sans: "Zen Kaku Gothic New", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Shippori Mincho", ui-serif, serif;
+
+  /* portal redesign palette */
+  --color-navy: #141e24;
+  --color-navy-light: #1a262d;
+  --color-brand: #1e7e58;
+  --color-brand-dark: #185f43;
+  --color-coral: #e05a6d;
+  --color-turf: #2e8b57;
+  --color-dirt: #d2691e;
 }
 
 body {
