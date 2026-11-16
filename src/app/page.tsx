@@ -28,10 +28,13 @@ export default async function Home() {
   const upcomingRaces = getGradedRaces()
     .filter((r) => r.date >= today)
     .sort((a, b) => (a.date < b.date ? -1 : 1));
-  const nextRace = upcomingRaces[0];
-  const strip = upcomingRaces.slice(1, 6);
+  const nextGrade1 = upcomingRaces.find((r) => r.grade.replace("J・", "") === "GⅠ");
+  const featuredRace = nextGrade1 ?? upcomingRaces[0];
+  const strip = upcomingRaces.filter((r) => r !== featuredRace).slice(0, 5);
 
-  const raceNames = Array.from(new Set(upcomingRaces.slice(0, 6).map((r) => r.name)));
+  const raceNames = Array.from(
+    new Set([featuredRace?.name, ...strip.map((r) => r.name)].filter((n): n is string => Boolean(n))),
+  );
   const articlesByRace = Object.fromEntries(raceNames.map((name) => [name, getArticlesByRace(name)]));
 
   return (
@@ -39,9 +42,13 @@ export default async function Home() {
       <Sidebar />
 
       <div className="flex min-w-0 flex-1 flex-col gap-14">
-        {nextRace && (
+        {featuredRace && (
           <section className="flex flex-col gap-5">
-            <FeaturedRaceHero race={nextRace} today={today} articles={articlesByRace[nextRace.name] ?? []} />
+            <FeaturedRaceHero
+              race={featuredRace}
+              today={today}
+              articles={articlesByRace[featuredRace.name] ?? []}
+            />
             {strip.length > 0 && (
               <UpcomingRaceStrip races={strip} articlesByRace={articlesByRace} />
             )}
