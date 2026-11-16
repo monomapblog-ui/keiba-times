@@ -2,25 +2,10 @@ import Link from "next/link";
 import { connection } from "next/server";
 import ScheduleFilters from "@/components/ScheduleFilters";
 import { getArticlesByRace, getGradedRaces, getNextGradedRace } from "@/lib/content";
+import { formatRaceDate, gradeClass } from "@/lib/grade";
 
 export const metadata = { title: "重賞日程 | 競馬タイムズ" };
 export const instant = false;
-
-const GRADE_STYLE: Record<string, string> = {
-  "GⅠ": "bg-amber-50 text-amber-900",
-  "GⅡ": "bg-sky-50 text-sky-900",
-  "GⅢ": "bg-neutral-100 text-neutral-700",
-};
-
-function gradeClass(grade: string) {
-  const key = grade.replace("J・", "");
-  return GRADE_STYLE[key] ?? "bg-neutral-100 text-neutral-700";
-}
-
-function formatDate(date: string, dow: string) {
-  const [, m, d] = date.split("-");
-  return `${Number(m)}月${Number(d)}日(${dow.replace("祝日・", "")})`;
-}
 
 export default async function SchedulePage() {
   await connection();
@@ -52,7 +37,7 @@ export default async function SchedulePage() {
             <h2 className="font-serif text-2xl font-bold text-neutral-900">{nextRace.name}</h2>
           </div>
           <p className="mt-2 text-sm text-neutral-700">
-            {formatDate(nextRace.date, nextRace.dow)}・{nextRace.venue}・{nextRace.course}・{nextRace.ageSex}
+            {formatRaceDate(nextRace.date, nextRace.dow)}・{nextRace.venue}・{nextRace.course}・{nextRace.ageSex}
           </p>
           {nextRaceArticles.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-3">
