@@ -24,8 +24,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-t1400.html",
           "asOf": "2026-10-27",
           "caveat": "東京芝1400mはバックストレッチからスタートし3・4コーナーを回るワンターンコースで、最初のコーナーまで342m。基本的には相対的に内枠有利とされ、直線で各馬が外へ広がりやすいためインで脚を溜めた馬が抜け出しやすい。",
           "bracketStats": [
@@ -536,8 +534,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-t1600.html",
           "asOf": "2026-10-27",
           "caveat": "東京芝1600mはNHKマイルC・安田記念・ヴィクトリアマイルなどで使用。2コーナー終点付近からスタートしバックストレッチを目一杯使うため最初のコーナーまで500m以上あり、枠順で極端な有利不利は出にくい。",
           "bracketStats": [
@@ -1030,8 +1026,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-t1800.html",
           "asOf": "2026-10-27",
           "caveat": "東京芝1800mはスタートが1・2コーナー奥のポケットという特殊な位置にある。スタート直後にコーナーがあるため外枠の馬は良いポジションを取るのが難しい。",
           "bracketStats": [
@@ -1538,8 +1532,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "東京芝2000mは1コーナー奥のポケットからスタートしすぐ左カーブするため内枠が有利な造り。コーナー数が少なく直線が長いためハイペースになりやすく、逃げ馬勝率がJRAワースト3に入るほど低いとの分析。",
           "bracketStats": [
@@ -2047,8 +2039,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-t2400.html",
           "asOf": "2026-10-27",
           "caveat": "東京芝2400mは日本ダービー・オークス・ジャパンカップなどで使用。インを小さく回ると有利になりやすいが、スタートを決めてインを取れる脚があるかが重要。",
           "bracketStats": [
@@ -2547,8 +2537,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-t2500.html",
           "asOf": "2026-10-27",
           "caveat": "東京芝2500mは重賞では目黒記念とアルゼンチン共和国杯でのみ使用。ホームストレッチからスタートして馬場を1周し、スタート直後と終盤の2回坂を駆け上がる。年2回のレースしかなくデータが極端に少ないため、ページ自体が枠番別・脚質別・人気別・騎手別・種牡馬別の集計表を公開していない。",
           "baseTimes": {
@@ -2573,11 +2561,11 @@
         "surface": "ダート",
         "distance": 1200,
         "courseType": "ダートスタート(通常)",
-        "startPosition": "JRA公式ページに具体的な記載なし。うまめし.comにも当該距離の統計ページが存在しないため裏付け情報も無し。",
+        "startPosition": "JRA公式ページに具体的な記載なし。該当距離の統計データも見つからず、裏付け情報が無い。",
         "finalStraightLength": 501.6,
         "finalStraightSlope": "up",
         "slopeInfo": "JRA公式:ホームストレッチの上り坂高低差2.4m(コース全体の高低差は2.5m)。1200m発走地点に特化した記述はJRA公式に無し。",
-        "tendency": "JRA公式のコース紹介文(ダート全体に対する記述)のみ:直線が日本最長(501.6m)で差し・追込馬が活躍しやすく、まくりは決まりにくい。距離別の特記事項はJRA公式になく、うまめし.comの統計ページも存在しないため個別の傾向は確認できず。",
+        "tendency": "JRA公式のコース紹介文(ダート全体に対する記述)のみ:直線が日本最長(501.6m)で差し・追込馬が活躍しやすく、まくりは決まりにくい。距離別の特記事項はJRA公式になく、該当距離の統計データも見つからないため、個別の傾向は確認できず。",
         "mainRaces": [],
         "startAngle": 133,
         "slopeArcs": []
@@ -2587,7 +2575,7 @@
         "surface": "ダート",
         "distance": 1300,
         "courseType": "ダートスタート(通常)",
-        "startPosition": "JRA公式に具体的距離の記載なし。うまめし.comによれば『JRA全10場のダート千二〜千四で最も初コーナーまでが短いコース』(具体的メートル数の記載なし)。",
+        "startPosition": "JRA公式に具体的距離の記載なし。分析記事によれば『JRA全10場のダート千二〜千四で最も初コーナーまでが短いコース』(具体的メートル数の記載なし)。",
         "finalStraightLength": 501.6,
         "finalStraightSlope": "up",
         "slopeInfo": "JRA公式:ホームストレッチ上り坂高低差2.4m(コース全体2.5m)。距離別の坂位置の記載はJRA公式になし。",
@@ -2596,8 +2584,6 @@
         "startAngle": 114,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 東京ダート1300m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-d1300.html",
           "asOf": "2026-10-27",
           "caveat": "重賞・OPは『特に該当なし』(2026-11時点)。",
           "bracketStats": [
@@ -3084,7 +3070,7 @@
         "surface": "ダート",
         "distance": 1400,
         "courseType": "ダートスタート(通常)",
-        "startPosition": "うまめし.comによれば『最初のコーナーまで442m』(JRA公式に該当記載なし)。",
+        "startPosition": "分析記事によれば『最初のコーナーまで442m』(JRA公式に該当記載なし)。",
         "finalStraightLength": 501.6,
         "finalStraightSlope": "up",
         "slopeInfo": "JRA公式:ホームストレッチ上り坂高低差2.4m(コース全体2.5m)。",
@@ -3093,8 +3079,6 @@
         "startAngle": 95,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 東京ダート1400m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-d1400.html",
           "asOf": "2026-10-27",
           "caveat": "重賞・OP一覧は空(該当レースなし、2026-11時点)。",
           "bracketStats": [
@@ -3574,7 +3558,7 @@
         "surface": "ダート",
         "distance": 1600,
         "courseType": "芝スタート(JRA公式明記。フェブラリーSの舞台となる唯一の芝スタート区間で、他の東京ダート距離とは異なる)",
-        "startPosition": "向正面側・2コーナー奥の芝コース部分からスタートし、バックストレッチをいっぱいに使う。うまめし.comによれば『スタートから3コーナーまでの距離が約650m』。",
+        "startPosition": "向正面側・2コーナー奥の芝コース部分からスタートし、バックストレッチをいっぱいに使う。分析記事によれば『スタートから3コーナーまでの距離が約650m』。",
         "finalStraightLength": 501.6,
         "finalStraightSlope": "up",
         "slopeInfo": "JRA公式:ホームストレッチ上り坂高低差2.4m(コース全体2.5m)。ダートでは日本一長い直線(501.6m)。",
@@ -3593,8 +3577,6 @@
         "startAngle": 57,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 東京ダート1600m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-d1600.html",
           "asOf": "2026-10-27",
           "bracketStats": [
             {
@@ -4067,7 +4049,7 @@
         "surface": "ダート",
         "distance": 2100,
         "courseType": "ダートスタート(通常)",
-        "startPosition": "うまめし.comによれば『ホームストレッチ側の中央付近からスタートし、一度ゴール前を通過して馬場を1周するコースレイアウト』。『スタート地点から最初の1コーナーまでの距離は約250mと長くはなく、コーナーも比較的急』。",
+        "startPosition": "分析記事によれば『ホームストレッチ側の中央付近からスタートし、一度ゴール前を通過して馬場を1周するコースレイアウト』。『スタート地点から最初の1コーナーまでの距離は約250mと長くはなく、コーナーも比較的急』。",
         "finalStraightLength": 501.6,
         "finalStraightSlope": "up",
         "slopeInfo": "JRA公式:ホームストレッチ上り坂高低差2.4m(コース全体2.5m)。",
@@ -4080,8 +4062,6 @@
         "startAngle": 322,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 東京ダート2100m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/tokyo-d2100.html",
           "asOf": "2026-10-27",
           "caveat": "基準タイム表の『2歳新馬』『2歳未勝利』『2歳』は原文で『0.0』(2歳戦の施行実績が無い)のためunavailableとした。",
           "bracketStats": [
@@ -4563,7 +4543,7 @@
         "surface": "ダート",
         "distance": 2400,
         "courseType": "ダートスタート(通常、推定)",
-        "startPosition": "JRA公式に具体的記載なし。うまめし.comにも統計ページが存在しないため裏付け情報なし。",
+        "startPosition": "JRA公式に具体的記載なし。該当距離の統計データも見つからないため裏付け情報なし。",
         "finalStraightLength": 501.6,
         "finalStraightSlope": "up",
         "slopeInfo": "JRA公式:ホームストレッチ上り坂高低差2.4m(コース全体2.5m)。距離別の記載はJRA公式になし。",
@@ -4593,8 +4573,6 @@
         "startAngle": 190,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-t1600.html",
           "asOf": "2026-10-27",
           "caveat": "中山芝1600mは1コーナー付近からスタートし外回りコースを通る。「スタート後すぐ2コーナーに入るため外枠不利」とよく言われ、データ上もわずかに内枠側の勝率が高いが、思い込みが強すぎると馬券的に不利になる場合もある。重賞・OP: 京成杯オータムハンデキャップ、ニュージーランドトロフィー、ダービー卿チャレンジトロフィー、東風S、アネモネS、ニューイヤーS、フェアリーS、ジュニアカップ、ターコイズS。",
           "bracketStats": [
@@ -5092,8 +5070,6 @@
         "startAngle": 160,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-t1800.html",
           "asOf": "2026-10-27",
           "caveat": "中山芝1800mはホームストレッチ中間あたりからスタートし馬場を1周する内回りコース。最初のコーナーまでわずか205mしかなく外枠・先行力の無い内枠馬には厳しい。重賞限定なら6〜8枠の外枠も馬券絡み頻度が高い。重賞・OP: フラワーカップ、スプリングS、中山牝馬S、中山記念、ディセンバーS。",
           "bracketStats": [
@@ -5588,8 +5564,6 @@
         "startAngle": 130,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "中山芝2000mは4コーナー終点のホームストレッチ入口からスタートし、一旦ゴール前を通過して内回りコースを馬場一周するレイアウト。心臓破りの坂(勾配2%)を2回通過し、最後の直線は310mと主要4場最短でロングスパート型が有利。重賞・OP: 芙蓉S、紫苑S、皐月賞、弥生賞ディープインパクト記念、京成杯、中山金杯、ホープフルS。",
           "bracketStats": [
@@ -6077,8 +6051,6 @@
         "startAngle": 100,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-t2200.html",
           "asOf": "2026-10-27",
           "caveat": "中山芝2200mは4コーナー終点あたりからスタートし外回り走路を一周する。ホームストレッチは全芝レースで使用され傷みやすく、内枠はスタミナ消耗が激しくなる傾向。統計上は『内過ぎず外過ぎず』の枠が最もパフォーマンスが高い。重賞・OP: オールカマー、セントライト記念、アメリカジョッキークラブカップ。",
           "bracketStats": [
@@ -6563,8 +6535,6 @@
         "startAngle": 60,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-t2500.html",
           "asOf": "2026-10-27",
           "caveat": "中山芝2500mは外回りコースの3コーナー入口付近からスタートするが、馬場を1周する際は内回りコースのみを使用する。コーナー通過が合計6回と外枠馬には厳しく、内枠馬と外枠馬に挟まれる中枠の成績が悪い。重賞・OP: 日経賞、有馬記念。2歳・3歳限定戦ではほとんど使われず新馬・未勝利戦の設定がない。",
           "bracketStats": [
@@ -7051,11 +7021,11 @@
         "surface": "ダート",
         "distance": 1200,
         "courseType": "中山ダートで唯一、芝スタート(2コーナー付近のポケット芝部分から発走)。JRA公式本文で明記。",
-        "startPosition": "2コーナー付近のポケット芝部分。最初のコーナーまで約502m(うまめし.com記事記載、JRA公式には距離別の数値記載なし)。",
+        "startPosition": "2コーナー付近のポケット芝部分。最初のコーナーまで約502m(分析記事記載、JRA公式には距離別の数値記載なし)。",
         "finalStraightLength": 308.0,
         "finalStraightSlope": "up",
         "slopeInfo": "コース全体高低差4.5m(JRA公式)。ゴール前に芝コースと同様の高低差を持つ急坂があるとJRA公式本文に記載されているが、正確なメートル数・勾圧%の明記はない。",
-        "tendency": "芝スタートでクッションが効かない分スピードが出やすい。2コーナーから直線入口まで下り基調で、序盤ペースが流れやすく、外枠が若干有利という統計的傾向(うまめし.com)。",
+        "tendency": "芝スタートでクッションが効かない分スピードが出やすい。2コーナーから直線入口まで下り基調で、序盤ペースが流れやすく、外枠が若干有利という統計的傾向が見られる。",
         "mainRaces": [
           "ラジオNIKKEI賞",
           "京葉ステークス",
@@ -7066,8 +7036,6 @@
         "startAngle": 71,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 中山ダート1200m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-d1200.html",
           "asOf": "2026-10-27",
           "caveat": "「2023年1回開催以降」を集計期間とするサイト側の記載あり。",
           "bracketStats": [
@@ -7534,7 +7502,7 @@
         "surface": "ダート",
         "distance": 1800,
         "courseType": "中山ダートの中心距離(1200mと並び年間施行数が多い)。4コーナー奥から発走。",
-        "startPosition": "4コーナー終わり部分から1コーナーに向けて発走。スタートから1コーナーまでは上り坂(うまめし.com記事)。JRA公式に正確なコーナーまでの距離の記載はない。",
+        "startPosition": "4コーナー終わり部分から1コーナーに向けて発走。スタートから1コーナーまでは上り坂(分析記事)。JRA公式に正確なコーナーまでの距離の記載はない。",
         "finalStraightLength": 308.0,
         "finalStraightSlope": "up",
         "slopeInfo": "コース全体高低差4.5m(JRA公式)。ゴール前の急坂は芝コースと同様の高低差があるとの記載のみで、正確な数値はJRA公式に明記なし。",
@@ -7550,8 +7518,6 @@
         "startAngle": 286,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 中山ダート1800m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/nakayama-d1800.html",
           "asOf": "2026-10-27",
           "caveat": "「2023年1回開催以降」を集計期間とするサイト側の記載あり。",
           "bracketStats": [
@@ -8048,12 +8014,12 @@
         "slug": "dirt-2400",
         "surface": "ダート",
         "distance": 2400,
-        "courseType": "JRA公式のダート発走距離一覧に記載あり。うまめし.com記事によれば2400m・2500mは年間合計で約10レース程度と施行数が極端に少ない。",
+        "courseType": "JRA公式のダート発走距離一覧に記載あり。分析記事によれば2400m・2500mは年間合計で約10レース程度と施行数が極端に少ない。",
         "startPosition": "不明(JRA公式ページに距離別の発走位置記載なし)",
         "finalStraightLength": 308.0,
         "finalStraightSlope": "up",
         "slopeInfo": "コース全体高低差4.5m(全ダート距離共通、JRA公式)。この距離固有の坂情報の記載はない。",
-        "tendency": "施行数が極端に少ない距離(うまめし.com本文の言及)。",
+        "tendency": "施行数が極端に少ない距離(分析記事本文の言及)。",
         "mainRaces": [],
         "startAngle": 141,
         "slopeArcs": []
@@ -8062,12 +8028,12 @@
         "slug": "dirt-2500",
         "surface": "ダート",
         "distance": 2500,
-        "courseType": "JRA公式のダート発走距離一覧に記載あり。うまめし.com記事によれば2400m・2500mは年間合計で約10レース程度と施行数が極端に少ない。",
+        "courseType": "JRA公式のダート発走距離一覧に記載あり。分析記事によれば2400m・2500mは年間合計で約10レース程度と施行数が極端に少ない。",
         "startPosition": "不明(JRA公式ページに距離別の発走位置記載なし)",
         "finalStraightLength": 308.0,
         "finalStraightSlope": "up",
         "slopeInfo": "コース全体高低差4.5m(全ダート距離共通、JRA公式)。この距離固有の坂情報の記載はない。",
-        "tendency": "施行数が極端に少ない距離(うまめし.com本文の言及)。",
+        "tendency": "施行数が極端に少ない距離(分析記事本文の言及)。",
         "mainRaces": [],
         "startAngle": 117,
         "slopeArcs": []
@@ -8093,8 +8059,6 @@
         "startAngle": 250,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-t1200.html",
           "asOf": "2026-10-27",
           "caveat": "京都芝1200mは内回りコースのみで施行される距離で、本集計は内回り単独の集計(外回りとの合算ではない)。スタート100mほどで3mの上り坂になり200mほど登った所が3コーナー入口。3コーナー中間から下り坂で150mほどの急坂を下る。直線328mはローカルより長い程度でスタミナが残った逃げ・先行馬が粘りやすく、差し・追込は決まりにくい。",
           "bracketStats": [
@@ -8587,8 +8551,6 @@
         "startAngle": 220,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-t1400.html",
           "asOf": "2026-10-27",
           "caveat": "京都芝1400mは内回りコースと外回りコースの両方で施行される距離で、本集計は内回り・外回りを分けず合算した集計。外回りの方がコーナーがきつく外側の馬のロスが大きい一方、最後の直線は外回りの方が70m以上長い。",
           "bracketStats": [
@@ -9107,8 +9069,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-t1600.html",
           "asOf": "2026-10-27",
           "caveat": "京都競馬場の芝1600mには内回り・外回りの2パターンがあり、若駒の下級条件では内回り、重賞・OP・古馬戦は外回りが使われる。下記の枠番別・脚質別・人気別・騎手別・血統別の集計は情報源の性質上、内回り・外回りを分けずに芝1600m全体を集計したものである点に注意。出典自身の注記では、外回りの逃げ馬勝率は15%、内回りの逃げ馬勝率は23%と、回り方で傾向が変わるとされている。調教師別・母父別のトップ10データは情報源で確認できず、今回は掲載していない。",
           "bracketStats": [
@@ -9612,8 +9572,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "京都芝2000mは内回りコースのみで施行される距離で、本集計は内回り単独の集計(外回りとの合算ではない)。重賞はG1秋華賞のみ。1・2コーナーの半径が小さく外を回ると不利(内枠有利・外枠不利の傾向)。",
           "bracketStats": [
@@ -10124,8 +10082,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-t2200.html",
           "asOf": "2026-10-27",
           "caveat": "京都芝2200mは外回りコースのみで施行される距離で、本集計は外回り単独の集計(内回りとの合算ではない)。傾向は芝2400mとほぼ共通で基本的に先行・内枠有利。単勝1番人気の勝率はJRA全体平均より高いが回収率は非常に悪いとされる。",
           "bracketStats": [
@@ -10663,8 +10619,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-d1200.html",
           "asOf": "2026-10-27",
           "caveat": "京都ダート1200mは向正面2コーナー終了付近スタート。最初のコーナーまで約400m、200〜400m地点に急な上り坂があり先行争いが早期収束。逃げ・先行有利が明確なコース。",
           "bracketStats": [
@@ -11176,8 +11130,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-d1400.html",
           "asOf": "2026-10-27",
           "caveat": "京都ダート1400mはJRA公式でも明記の通り芝スタート。スタートから400m弱平坦で、1200mより先行争いがやや長引く。",
           "bracketStats": [
@@ -11692,8 +11644,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-d1800.html",
           "asOf": "2026-10-27",
           "caveat": "京都ダート1800mはホームストレッチ側中央やや右からスタート、最初のコーナーまで285m。3コーナー付近に急坂があり外を回る捲りはスタミナ消耗が大きい。",
           "bracketStats": [
@@ -12210,8 +12160,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/kyoto-d1900.html",
           "asOf": "2026-10-27",
           "caveat": "京都ダート最長距離(主に3歳以上の古馬限定戦)。1枠が特に有利という統計的特徴があり、単勝1番人気の信頼度はJRA平均より低い。",
           "bracketStats": [
@@ -12686,7 +12634,7 @@
             "4歳以上": "1:59.2"
           },
           "unavailable": [
-            "2歳新馬・2歳未勝利・2歳のコースタイム(1900mは2歳戦が行われないため、うまめし.com上も「0.0」でデータなし)"
+            "2歳新馬・2歳未勝利・2歳のコースタイム(1900mは2歳戦が行われないため、元データ上も「0.0」でデータなし)"
           ]
         }
       },
@@ -12695,11 +12643,11 @@
         "surface": "ダート",
         "distance": 1000,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 329.1,
         "finalStraightSlope": "none",
         "slopeInfo": "コース高低差3.0m(全ダート距離共通、JRA公式)。この距離固有の坂情報の記載はない。",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 136,
         "slopeArcs": [
@@ -12720,11 +12668,11 @@
         "surface": "ダート",
         "distance": 1100,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 329.1,
         "finalStraightSlope": "none",
         "slopeInfo": "コース高低差3.0m(全ダート距離共通、JRA公式)。この距離固有の坂情報の記載はない。",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 114,
         "slopeArcs": [
@@ -12745,11 +12693,11 @@
         "surface": "ダート",
         "distance": 2600,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 329.1,
         "finalStraightSlope": "none",
         "slopeInfo": "コース高低差3.0m(全ダート距離共通、JRA公式)。この距離固有の坂情報の記載はない。",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 138,
         "slopeArcs": [
@@ -12786,8 +12734,6 @@
         "startAngle": 260,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-t1200.html",
           "asOf": "2026-10-27",
           "caveat": "阪神芝1200mは内回りコースのみで使用される。スタートから最初のコーナーまでが258mしかなく、ゲートの上手さと出脚のダッシュ力が重要。直線356mのうち残り200m〜100mは約1%の上り勾配で、序盤・中盤で無理をした馬はここで失速する。内枠有利の傾向はあるが、極端に枠順を気にする必要はないとの注記あり。",
           "bracketStats": [
@@ -13292,8 +13238,6 @@
         "startAngle": 230,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-t1400.html",
           "asOf": "2026-10-27",
           "caveat": "注意:本文には「内回りコースの3〜4コーナーは下り坂」という記述が1箇所あるのみで「外回り」という語は一度も出てこない。阪神芝1400mは実際には内回り・外回りの両方が使われるが、この集計がどちらの設定(または混在)を指すかページ上で明示されていない。最初のコーナーまで458mあり平坦なため序盤のペースが速めに流れがち。",
           "bracketStats": [
@@ -13797,8 +13741,6 @@
         "startAngle": 190,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-t1600.html",
           "asOf": "2026-10-27",
           "caveat": "阪神芝1600mは外回りコースのみで使用される(桜花賞・朝日杯FS・阪神JFなど)。最初のコーナーまでの距離が長く先行争いが長引きやすい。直線は473mと全国で3番目に長く、残り200m〜100mは約1%の上り勾配。",
           "bracketStats": [
@@ -14296,8 +14238,6 @@
         "startAngle": 160,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-t1800.html",
           "asOf": "2026-10-27",
           "caveat": "阪神芝1800mは外回りコースのみで使用される。スタートから最初のコーナーまで600m以上あり、馬群が十分縦長になるため外枠の馬でもそれほど外を回らずに済む。3〜4コーナーは長く緩やかな下り坂。",
           "bracketStats": [
@@ -14797,8 +14737,6 @@
         "startAngle": 130,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "阪神芝2000mは内回りコースのみで使用される(大阪杯など)。スタートから最初のコーナーまでは330mで、スタート直後に1%勾配の上り坂があるため序盤はそれほどハイペースにならない。コーナーは全て急カーブで直線は短く、インで脚を溜めて好位から抜け出すのが基本パターン。",
           "bracketStats": [
@@ -15307,8 +15245,6 @@
         "startAngle": 100,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-t2200.html",
           "asOf": "2026-10-27",
           "caveat": "阪神芝2200mは内回りコースのみで使用される(宝塚記念など)。【重要な制約】このページには他距離にある枠番別の文章データが掲載されておらず、代わりに馬場状態別の枠×脚質の回数集計表のみが掲載されている。したがって枠番別の着度数・勝率・連対率・複勝率・脚質内訳は本ページからは取得できず、bracketStats・paceStatsは省略した。スタートから最初のコーナーまでが530mと長いが、ハイペースにはなりづらい。できるだけインを回れる馬が有利。",
           "favoriteStats": [
@@ -15554,8 +15490,6 @@
         "startAngle": 75,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-d1200.html",
           "asOf": "2026-10-27",
           "bracketStats": [
             {
@@ -16057,8 +15991,6 @@
         "startAngle": 28,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-d1400.html",
           "asOf": "2026-10-27",
           "bracketStats": [
             {
@@ -16551,8 +16483,6 @@
         "startAngle": 293,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-d1800.html",
           "asOf": "2026-10-27",
           "bracketStats": [
             {
@@ -17053,8 +16983,6 @@
         "startAngle": 245,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/hanshin-d2000.html",
           "asOf": "2026-10-27",
           "caveat": "2歳新馬・2歳未勝利・2歳の基準タイムは元データが「0.0」(該当レースが無いため計測不可)。bracketStats等のサンプル数は他距離に比べ少ない(年2回程度の開催のため)。",
           "bracketStats": [
@@ -17541,11 +17469,11 @@
         "surface": "ダート",
         "distance": 2600,
         "courseType": "JRA公式に発走距離として記載あり(1,200m/1,400m/1,800m/2,000m/2,600mの一つ)。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 352.7,
         "finalStraightSlope": "up",
         "slopeInfo": "コース全体の高低構成(残り900m地点から下り、残り200m地点から高低差1.6mの上り坂)はこの距離にも適用されると推測されるが、2600m個別の記述はJRA公式ページに無い",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 103,
         "slopeArcs": []
@@ -17574,8 +17502,6 @@
         "startAngle": 260,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-t1200.html",
           "asOf": "2026-10-27",
           "caveat": "重賞・OP: CBC賞、高松宮記念、クリスマスローズステークス、小倉2歳ステークス。中京芝1200mは最後の直線が412mもある一方コーナー部は470mしかなく、バックストレッチとホームストレッチが並行でない「ヘアピンカーブ」状のため外を回る馬は距離損が大きく、基本的に内枠先行有利。",
           "bracketStats": [
@@ -18079,8 +18005,6 @@
         "startAngle": 220,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-t1400.html",
           "asOf": "2026-10-27",
           "caveat": "重賞・OP: 中京2歳ステークス、愛知杯、ファルコンステークス、ききょうステークス。中京芝1400mは2コーナー終点付近の引込線からスタートし、最初のコーナーまでが500m以上あるため外枠の先行馬も余裕を持って動ける。ただし恩恵があるのは6枠あたりまでで、7・8枠は距離損の方が大きい。",
           "bracketStats": [
@@ -18577,8 +18501,6 @@
         "startAngle": 130,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "重賞・OP: 金鯱賞、中日新聞杯、ケフェウスステークス(コース分析文中では愛知杯もこのコースで行われると言及)。中京芝2000mはホームストレッチ中ほどからスタートし馬場を1周。レースの大半が下級条件のため逃げ・先行馬の成績も悪くない。",
           "bracketStats": [
@@ -19079,8 +19001,6 @@
         "startAngle": 100,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-t2200.html",
           "asOf": "2026-10-27",
           "caveat": "重賞・OPは該当なし。中京芝2200mはホームストレッチの4コーナー側端からスタートし馬場を1周。2歳戦には使用されず、ほとんどが未勝利・1勝クラス。中団前後から最後に脚を使える馬が有利になりやすい。",
           "bracketStats": [
@@ -19568,8 +19488,6 @@
         "startAngle": 78,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-d1200.html",
           "asOf": "2026-10-27",
           "caveat": "2023年1回開催以降のデータ集計。重賞・OPは「特に該当なし」。baseTimesはページに該当セクションが無く取得不可。",
           "bracketStats": [
@@ -20048,8 +19966,6 @@
         "startAngle": 31,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-d1400.html",
           "asOf": "2026-10-27",
           "caveat": "2023年1回開催以降のデータ集計。baseTimesはページに該当セクションが無く取得不可。",
           "bracketStats": [
@@ -20517,8 +20433,6 @@
         "startAngle": 296,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/chukyo-d1800.html",
           "asOf": "2026-10-27",
           "caveat": "2023年1回開催以降のデータ集計。baseTimesはページに該当セクションが無く取得不可。",
           "bracketStats": [
@@ -20979,11 +20893,11 @@
         "surface": "ダート",
         "distance": 1900,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 410.7,
         "finalStraightSlope": "up",
         "slopeInfo": "全ダートコース共通の起伏構造が適用されると見られるが、この距離固有の記述はJRA公式ページに無い",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 273,
         "slopeArcs": []
@@ -20993,11 +20907,11 @@
         "surface": "ダート",
         "distance": 2500,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 410.7,
         "finalStraightSlope": "up",
         "slopeInfo": "全ダートコース共通の起伏構造が適用されると見られるが、この距離固有の記述はJRA公式ページに無い",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 132,
         "slopeArcs": []
@@ -21023,8 +20937,6 @@
         "startAngle": 0,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/niigata-t1000.html",
           "asOf": "2026-10-27",
           "caveat": "新潟芝1000mは日本の競馬場で唯一、コーナーのない直線だけのコース。残り600m付近からは通常コースとの共用区間のため開催が進むとインが荒れやすく、外ラチ沿いを直進できる外枠がやや有利とされる。ただし大外枠はスタートで出が悪いと馬群に囲まれるリスクがある。本ページには1〜8枠ごとの着度数・勝率等の数値テーブルは無く、脚質適性を×/△/○/◎/◉の記号で示す表のみが掲載されている(7・8枠が最も良好、1・2枠が最も不利)。",
           "favoriteStats": [
@@ -21274,8 +21186,6 @@
         "startAngle": 190,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/niigata-t1600.html",
           "asOf": "2026-10-27",
           "caveat": "新潟芝1600mコースは外回りのみを使用。向正面中央やや右寄りからスタートし、外回り3・4コーナーを回って最後は659mの長い直線に入る。1600mになるとマイル以下の短距離に比べ逃げ馬の勝率は半減、複勝率も約2/3に低下。最初のコーナーまで548mと長く、外枠でも距離損の少ないポジションを取りやすい。",
           "bracketStats": [
@@ -21781,8 +21691,6 @@
           }
         ],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/niigata-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "新潟芝2000mには内回り・外回りの2種類があり、特徴が大きく異なる。外回り(新潟記念・新潟大賞典など上級条件)は最初のコーナーまで950mと長く1枠の逃げ馬には厳しい一方、直線658mで差し・追込が利きやすい。内回り(下級条件)は逃げ馬が有利で、逃げ馬の勝率は内回り24.1%・外回り6.8%と大きく異なる。【重要な注意】本ページの枠番別・人気別・騎手別・血統別の数値集計は、外回り限定か内外合算かが明記されておらず、新潟芝2000m全体の合算集計である可能性がある。",
           "bracketStats": [
@@ -22294,8 +22202,6 @@
         "startAngle": 67,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 新潟ダート1200m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/niigata-d1200.html",
           "asOf": "2026-10-27",
           "bracketStats": [
             {
@@ -22775,8 +22681,6 @@
         "startAngle": 280,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 新潟ダート1800m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/niigata-d1800.html",
           "asOf": "2026-10-27",
           "caveat": "このページの「人気傾向」セクションは見出し・数値ともに新潟ダート1200mページと完全一致しており(サイト側のテンプレート/データ誤表示と判断)、favoriteStatsはunavailableとした。他セクション(枠順・脚質・騎手・血統)は1800m固有の値であることを確認済み。",
           "bracketStats": [
@@ -23197,11 +23101,11 @@
         "surface": "ダート",
         "distance": 1000,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず[404]裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 353.9,
         "finalStraightSlope": "none",
         "slopeInfo": "全コース高低差0.6m(全ダート距離共通、JRA公式)。この距離固有の記載はない。",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 116,
         "slopeArcs": []
@@ -23211,11 +23115,11 @@
         "surface": "ダート",
         "distance": 1700,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず[404]裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 353.9,
         "finalStraightSlope": "none",
         "slopeInfo": "全コース高低差0.6m(全ダート距離共通、JRA公式)。この距離固有の記載はない。",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 304,
         "slopeArcs": []
@@ -23225,11 +23129,11 @@
         "surface": "ダート",
         "distance": 2500,
         "courseType": "JRA公式の発走距離一覧に記載あり。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず[404]裏付け情報なし)",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)",
         "finalStraightLength": 353.9,
         "finalStraightSlope": "none",
         "slopeInfo": "全コース高低差0.6m(全ダート距離共通、JRA公式)。この距離固有の記載はない。",
-        "tendency": "不明(うまめし.comに該当ページが存在せず、現状レースで常用されていないと見られる)",
+        "tendency": "不明(該当距離の統計データが見つからず、現状レースで常用されていないと見られる)",
         "mainRaces": [],
         "startAngle": 109,
         "slopeArcs": []
@@ -23255,8 +23159,6 @@
         "startAngle": 260,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/sapporo-t1200.html",
           "asOf": "2026-10-27",
           "caveat": "札幌芝1200mはコーナー2回のワンターンだが、スタートから最初のコーナーまでが400m以上と長く、先行争いが長引くため内枠は外から競られて不利になりやすい。実際の枠番別成績でも内外より中間枠の方が良い。コースは平坦でパワーを要さないが、中央全場の芝1200mの中でも逃げ馬の勝率が最低クラス(函館の半分程度)で、サクラバクシンオーやディープインパクトなど父がスピード型の産駒が強い。理想は中団からの瞬発力勝負で逃げ馬を差すパターン。重賞・OPの指定レースはページ上に記載なし。",
           "bracketStats": [
@@ -23760,8 +23662,6 @@
         "startAngle": 230,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/sapporo-t1500.html",
           "asOf": "2026-10-27",
           "caveat": "札幌芝1500mはスタート直後にコーナーがあるタイプで、最初のコーナーまでの先行争いがコーナー部分で行われるため外枠は基本的に不利。最初のコーナーまでに先頭を取れる先行力があれば外枠でも問題ないが、中途半端な外枠の先行馬は3コーナー全てで外を回る羽目になりスタミナ切れしやすい。追込馬は最初から後方に位置するため最初のコーナーの不利は少ないが、最後の直線が266.1mと短く平坦なため元々差しが決めづらいコース。重賞・OPはクローバー賞のみ。なお、クイーンステークス(GIII)は同じ札幌でも芝1800mで行われており、1500mではない点に注意。",
           "bracketStats": [
@@ -24257,8 +24157,6 @@
         "startAngle": 170,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/sapporo-t1800.html",
           "asOf": "2026-10-27",
           "caveat": "札幌芝1800mはホームストレッチ中間からスタートし馬場を1周。最初の1コーナーまでは185mしかなく、形状面では外枠不利の要素があるが一概に内枠有利とは言えない。1500mと比べ300m長い分、逃げ馬がバテやすく、逃げ・先行馬が複数バテると壁になり、外のポジションでやや脚を残した馬が抜け出しやすい展開になりがち。重賞・OPは札幌2歳ステークス・コスモス賞・クイーンステークス(GIII)。",
           "bracketStats": [
@@ -24763,8 +24661,6 @@
         "startAngle": 130,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com(2023年1回開催以降の集計)",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/sapporo-t2000.html",
           "asOf": "2026-10-27",
           "caveat": "札幌芝2000mは夏競馬最大の重賞「札幌記念」の舞台。4コーナー奥のポケットからスタートし、ホームストレッチを通過後に馬場を一周する使用頻度の低いコース。重賞・OPは札幌記念のみ。",
           "bracketStats": [
@@ -25251,7 +25147,7 @@
         "surface": "ダート",
         "distance": 1000,
         "courseType": "通常コース(スパイラルカーブ不使用)。向正面(バックストレッチ)からスタートしゴールまでワンターンする最短距離コース。",
-        "startPosition": "向正面(バックストレッチ)、1コーナー寄りからスタート(JRA公式コース平面図で確認)。うまめし.comの分析では最初のコーナーまで約284mとされる。",
+        "startPosition": "向正面(バックストレッチ)、1コーナー寄りからスタート(JRA公式コース平面図で確認)。分析記事では最初のコーナーまで約284mとされる。",
         "finalStraightLength": 264.3,
         "finalStraightSlope": "none",
         "slopeInfo": "高低差0.9mとごく小さく、JRA公式も『起伏は設けられておらずほぼ平坦』と明記。向正面中盤にわずかな上り(+0.5m程度)があるのみで、直線部分に明確な坂は確認できない。",
@@ -25260,8 +25156,6 @@
         "startAngle": 118,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 札幌ダート1000m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/sapporo-d1000.html",
           "asOf": "2026-10-27",
           "caveat": "集計期間は2023年1回開催以降。コースタイム表の『2歳新馬』『4歳以上』は元ページ表示が0.0でデータなしと判断し、baseTimesには含めていない。",
           "bracketStats": [
@@ -25758,7 +25652,7 @@
         "surface": "ダート",
         "distance": 1700,
         "courseType": "通常コース(スパイラルカーブ不使用)。ホームストレッチ(スタンド前直線)上からスタートし、ゴール前を一度通過してから1周するコース。",
-        "startPosition": "ホームストレッチ(スタンド前直線)上、ゴールよりやや右(1コーナー寄り)からスタート(JRA公式コース平面図で確認。芝1,800m発走点と芝2,000m発走点の間に位置)。うまめし.comでは最初のコーナーまで約240mとされる。",
+        "startPosition": "ホームストレッチ(スタンド前直線)上、ゴールよりやや右(1コーナー寄り)からスタート(JRA公式コース平面図で確認。芝1,800m発走点と芝2,000m発走点の間に位置)。分析記事では最初のコーナーまで約240mとされる。",
         "finalStraightLength": 264.3,
         "finalStraightSlope": "none",
         "slopeInfo": "dirt-1000と同一コースの高低差0.9m。向正面にわずかな上りがあるのみでほぼ平坦。",
@@ -25769,8 +25663,6 @@
         "startAngle": 308,
         "slopeArcs": [],
         "stats": {
-          "sourceLabel": "うまめし.com 札幌ダート1700m",
-          "sourceUrl": "https://www.umameshi.com/info/keibajou/sapporo-d1700.html",
           "asOf": "2026-10-27",
           "caveat": "集計期間は2023年1回開催以降。『4歳以上』の基準タイムは元ページ表示が0.0でデータなしと判断し含めていない。",
           "bracketStats": [
@@ -26260,11 +26152,11 @@
         "surface": "ダート",
         "distance": 2400,
         "courseType": "通常コース(スパイラルカーブ不使用)。向正面(バックストレッチ、3〜4コーナー寄り)からスタートし、1周+ホームストレッチの大部分を走る長距離設定。",
-        "startPosition": "不明(JRA公式ページに個別記載なし。うまめし.comにも該当ページが存在せず[404]裏付け情報なし)。概算では向正面の3-4コーナー寄り付近と推定される。",
+        "startPosition": "不明(JRA公式ページに個別記載なし。該当距離の統計ページが見つからず裏付け情報なし)。概算では向正面の3-4コーナー寄り付近と推定される。",
         "finalStraightLength": 264.3,
         "finalStraightSlope": "none",
         "slopeInfo": "dirt-1000/1700と同一コースの高低差0.9m。ほぼ平坦。",
-        "tendency": "不明(JRA公式本文・うまめし.comともに距離別の傾向記述なし)",
+        "tendency": "不明(JRA公式本文・参照した資料ともに距離別の傾向記述なし)",
         "mainRaces": [],
         "startAngle": 139,
         "slopeArcs": []

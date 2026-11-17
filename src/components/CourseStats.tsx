@@ -49,13 +49,7 @@ export default function CourseStats({ stats }: { stats: CourseStatsType }) {
     <div className="mb-10 rounded-xl border border-neutral-200 p-6">
       <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="font-serif text-base font-bold text-neutral-900">コースデータ</h2>
-        <span className="text-xs text-neutral-400">
-          出典:{" "}
-          <a href={stats.sourceUrl} className="underline hover:opacity-70" target="_blank" rel="noreferrer">
-            {stats.sourceLabel}
-          </a>
-          {stats.asOf && `(${stats.asOf}時点)`}
-        </span>
+        {stats.asOf && <span className="text-xs text-neutral-400">{stats.asOf}時点のデータ</span>}
       </div>
 
       {stats.caveat && (

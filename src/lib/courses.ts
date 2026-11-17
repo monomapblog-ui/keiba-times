@@ -55,8 +55,8 @@ export type LineageGroupStat = {
 };
 
 export type CourseStats = {
-  sourceLabel: string;
-  sourceUrl: string;
+  sourceLabel?: string;
+  sourceUrl?: string;
   asOf?: string;
   caveat?: string;
   bracketStats?: BracketStat[];
